@@ -1,4 +1,5 @@
 open PlayWithModules.MyInteger
+open PlayWithModules.MyFloat
 open PlayWithModules.IList. IntegerList
 open PlayWithModules.SortFunctor
 
@@ -8,5 +9,8 @@ let () =
   
   let module Foo = SortFunctor(MyInteger) in
     let l = Foo.sort [1; 4; 2] in
-  print_endline (Foo.printList(l));
-  print_endline "Hello, World!"
+      print_endline (Foo.printList(l));
+
+  let module Foo = SortFunctor(MyFloat) in
+    let l = Foo.sort [5.1; 1.4; 2.5] in
+      print_endline (Foo.printList(l));
