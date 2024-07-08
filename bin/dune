@@ -1,0 +1,4 @@
+(executable
+ (public_name playWithModules)
+ (name main)
+ (libraries playWithModules))
