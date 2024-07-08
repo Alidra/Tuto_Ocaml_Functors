@@ -1,8 +1,9 @@
-open PlayWithModules.Integer.MyInteger
+open PlayWithModules.MyInteger
 open PlayWithModules.IList. IntegerList
 open PlayWithModules.SortFunctor
+
 let () = 
-  print_endline (string_of_bool (compare 5 9));
+  print_endline (string_of_bool ((<) 5 9));
   print_endline (printList (sort [ 5; 3; 8; 1]));
   
   let module Foo = SortFunctor(MyInteger) in
